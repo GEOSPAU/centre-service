@@ -8,12 +8,12 @@ export default function Dashboard() {
             {/* HEADER */}
             <header style={styles.header}>
                 <img src="/images/logo_mtfp.png" alt="Logo MTFP" style={styles.logo} />
-                <div style={styles.headerRight}>
-                 <span style={styles.adminBadge}>Administrateur</span>
-                  <button style={styles.logoutBtn} onClick={() => router.post('/logout')}>
+                <button
+                    style={styles.logoutBtn}
+                    onClick={() => router.post('/logout')}
+                >
                     Se déconnecter
-                  </button>
-                 </div>
+                </button>
             </header>
 
             {/* TITRE */}
@@ -47,16 +47,6 @@ export default function Dashboard() {
                 </div>
             </main>
 
-            {/* BOUTON DECONNEXION */}
-            <div style={styles.logoutContainer}>
-                <button
-                    style={styles.logoutBtn}
-                    onClick={() => router.post('/logout')}
-                >
-                    Se déconnecter
-                </button>
-            </div>
-
             {/* FOOTER */}
             <footer style={styles.footer}>
                 © 2026 — Centre de Service des Fonctionnaires | Ministère du Travail et de la Fonction Publique — République du Bénin
@@ -80,11 +70,23 @@ const styles = {
         padding: "15px 40px",
         display: "flex",
         alignItems: "center",
+        justifyContent: "space-between",
+        boxSizing: "border-box",
     },
     logo: {
         height: "90px",
         width: "auto",
         display: "block",
+    },
+    logoutBtn: {
+        background: "transparent",
+        color: "white",
+        border: "1px solid rgba(255,255,255,0.5)",
+        borderRadius: "6px",
+        padding: "8px 16px",
+        fontSize: "13px",
+        cursor: "pointer",
+        fontWeight: "600",
     },
     titleBar: {
         background: "white",
@@ -118,7 +120,6 @@ const styles = {
         padding: "36px 30px",
         cursor: "pointer",
         textAlign: "center",
-        transition: "transform 0.2s",
         borderTop: "4px solid " + BLEU,
     },
     cardIcon: {
@@ -145,20 +146,6 @@ const styles = {
         padding: "10px 24px",
         fontSize: "14px",
         fontWeight: "700",
-        cursor: "pointer",
-    },
-    logoutContainer: {
-        display: "flex",
-        justifyContent: "center",
-        padding: "10px",
-    },
-    logoutBtn: {
-        background: "transparent",
-        color: "#888",
-        border: "1px solid #ccc",
-        borderRadius: "6px",
-        padding: "8px 20px",
-        fontSize: "13px",
         cursor: "pointer",
     },
     footer: {
