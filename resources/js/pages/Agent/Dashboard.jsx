@@ -8,6 +8,12 @@ export default function Dashboard() {
             {/* HEADER */}
             <header style={styles.header}>
                 <img src="/images/logo_mtfp.png" alt="Logo MTFP" style={styles.logo} />
+                <div style={styles.headerRight}>
+                 <span style={styles.adminBadge}>Administrateur</span>
+                  <button style={styles.logoutBtn} onClick={() => router.post('/logout')}>
+                    Se déconnecter
+                  </button>
+                 </div>
             </header>
 
             {/* TITRE */}
