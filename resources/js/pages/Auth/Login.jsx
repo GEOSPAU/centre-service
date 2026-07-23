@@ -67,7 +67,7 @@ export default function Login() {
             </main>
 
             <footer style={styles.footer}>
-                © 2026 — Centre de Service des Fonctionnaires | Ministère de l'Économie et des Finances chargé du budget et de la Fonction Publique — République du Bénin
+                © 2026 — Centre de Service des Fonctionnaires | Ministère de l'Économie et des Finances chargé du Budget et de la Fonction Publique — République du Bénin
             </footer>
         </div>
     );
