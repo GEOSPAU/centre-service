@@ -4,6 +4,7 @@ RUN apk add --no-cache nodejs npm
 
 COPY . .
 
+RUN composer install --no-dev --optimize-autoloader --working-dir=/var/www/html
 RUN npm install && npm run build
 
 ENV SKIP_COMPOSER 1
