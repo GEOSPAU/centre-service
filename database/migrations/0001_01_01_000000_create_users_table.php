@@ -12,7 +12,7 @@ return new class extends Migration
             $table->id();
             $table->string('login')->unique();
             $table->string('password');
-            $table->enum('role', ['admin', 'agent'])->default('agent');
+            $table->string('role')->default('agent');
             $table->date('date_arrivee')->nullable();
             $table->timestamps();
         });

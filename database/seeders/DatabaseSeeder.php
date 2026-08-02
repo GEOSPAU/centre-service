@@ -13,14 +13,14 @@ class DatabaseSeeder extends Seeder
         // Compte administrateur
         User::create([
             'login' => 'admin',
-            'password' => Hash::make('admin2026'),
+            'password' => Hash::make('admin202'),
             'role' => 'admin',
         ]);
 
         // Compte agent partagé
         User::create([
-            'login' => 'MTFP',
-            'password' => Hash::make('FP2026'),
+            'login' => 'CDS-MBFP',
+            'password' => Hash::make('mbfp2026'),
             'role' => 'agent',
         ]);
 
